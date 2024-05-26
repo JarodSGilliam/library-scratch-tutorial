@@ -1,4 +1,4 @@
-# library-scratch-tutorial
+# Scratch Tutorial
 
 ## 1. Setup and Adding Sprites
 
@@ -124,7 +124,7 @@ If you want the ship to fly faster when the mouse is further away, you can do th
 ![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/42cda58b-d0fc-41d8-9ddf-0c669c7ccf0c)
 
 
-## 2. Enemy
+## 3. Enemy
 
 Now we want an enemy that flies towards the rocketship. Since this is basically the same as the move toward mouse code, we can copy and paste that code and make the limited required alterations.
 
