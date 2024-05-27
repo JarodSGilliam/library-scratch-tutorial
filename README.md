@@ -336,32 +336,106 @@ Create a new sprite for the title screen. When the START block is activated, sho
 
 The first block is like the START block but activates when this sprite is clicked.
 
-### Game over screen
+### Game over screen:
 
 Create a new sprite for the game over screen and copy the script with the CLICKED block into it.
 Now we need to know when the game is over.
 Replace the STOP all block in the rocketship with a BROADCAST block that sends out a "game over" message.
 
-### Stop the game
+### Stop the game:
 
 Add a RECEIVE block that receives the "game over" message and deletes the clone to everything that creates clones.
 Add a RECEIVE block that receives the "game over" message and hides the sprite to everything else.
 
 
-## 7. Sounds/background music
-## 8. Pickups
+## 7. Sounds/Background music
+
+Despite seeming like a small part of a game, music and sound can turn a good game into a great one.
+
+### The SOUND blocks:
+
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/5285f1cd-02aa-41a2-9906-72d58028a83b)
+
+The first block plays the given sound and then only after the sound has finished playing activates the block below it.
+The second block plays the given sound and then imediately activates the block below it.
+The third block stops all currently playing sounds for all sprites.
+
+### Sounds tab:
+
+Adding a sound works just like the costumes tab. Click the bottom button and you can choose a sound, record a sound, or upload your own sound.
+
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/9ad4f4d3-24ef-453d-b8ac-5897334844b6)
+
+To add some background music (I chose "Space Ambience" for my music), go to the start screen sprite you created and add a script that once the START button was pressed will play music forever if a variable is set to true. Add a script that sets the variable to true when your "start game" message is received and another that stops all sound and sets the variable to false when the "game over" message is received.
+
+The result should look something like this.
+
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/ee7b4ee9-b11f-4cde-8b86-2c28b49de80c)
+
+### Troubleshooting
+
+Currently the music is very loud.
+
+### The VOLUME blocks
+
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/aeb49148-9ce0-4f98-bd97-8e81ef75dcce)
+
+These blocks let you change, set, and see the volume. The volume you set only applies to the current sprite. If your music is too loud, you can turn it down by decreasing the percent. And if too loud, you can increase it.
+
+
+If you want to give the player the option of what volume they want for the music, you can create a variable for it and then constantly set the volume to that variable. Then 
+click the check box next to the variable you craeted. A display will pop up on your screen over the game. Double tap that rounded box to change its mode. One of the modes give the player a slider they can use to change the value of that variable and thus the volume of the music.
+
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/f6a70fa9-52c7-4dc2-a16b-b9a25c95ef0b)
+
+## 8. Powerups
+
+Many games like this have powerups. Implementing them is simply a combination of scripts that we have used before. We want to start with a simple collectable that will give the player an extra heart. To do so, we have it randomly spawn clones like the enemies do, go to a random position like the enemies do, increase the player's hearts when it touches the rocketship, and have the clones delete itself when the game is over.
+
+Here is an example of how scripts to do this.
+
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/804316f6-706f-4f47-a98f-944bee8429fb)
+
 ## 9. Explosion
 
+I want to have an explosion go off when the player destroyes an enemy or when the rocketship is destroyed by an enemy. To do so, you need to spawn a clone every time an enemy or the rocketship is destroyed and teleport that clone to the location where the enemy was. To do this, we can set a variable to the position of where whe want the explosion to occur whenever we want it to occur. Then when the clone can be spawned, teleported to that position and then set the variable back to "False".
 
+### The GO TO block
 
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/ffe7bc91-2ac3-41f3-a7eb-f62876c31add)
 
+Teleports the sprite to a specific position. The x value is how far the sprite is from the center horizontally. If the x value is positive, the sprite is right of the center, if the x value is negative it is left of the center. The center has a value of 0. All the way right has a value of 240, all the way left has a value of -240.
+The y value is how far the sprite is from the center vertically. If the y value is positive, the sprite is up from the center, if the y value is negative it is down from the center. The center has a value of 0. The top has a value of 180, all the bottom has a value of -180.
 
+### The CURRENT POSIITION blocks
 
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/d0e03c82-122d-4a5b-9caf-b1559de51c9f)
 
+Says were the sprite currently is.
 
+Since there is no explosion sound effect, I created one by playing two sounds at once and changing the pitch.
 
+### The SOUND EFFECT blocks
 
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/e1715e2a-eea4-4d6a-bf12-30750f50410d)
 
+These blocks allow changing how sounds sound. You can change their pitch or make them sound like they are coming from the left or the right.
 
+### Example of explosion scripts
 
+Here are the scripts I wrote to make the explosions work. Yours should be similar.
 
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/a09a04c2-f626-434a-8f10-810e5266b9a3)
+
+In the explosion sprite.
+
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/fe04635d-8309-4816-8ad4-69e48ffba003)
+
+In the enemy sprite.
+
+## 10. Expanding the game from here
+
+To make the game more interesting, you could add differnent types of enemies or powerups. Both of these can be done by applying what is described above.
+
+I advise just playing around with it. Scratch is ultametely a game in and of itself and the best way to learn programming as a whole is just to mess around with it.
+So come up with interesting game ideas and give building them a shot. I can't wait to see what you make!
