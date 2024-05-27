@@ -271,6 +271,9 @@ Now, to make the variable visible to the user, click the box next to the variabl
 
 ![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/19cc6aa3-6543-4028-994d-923b0f2fc744)
 
+### Extra:
+You can use a similar system to give the enemies health. Just be sure to select "For this sprite only" when creating the variable so that each of the clones has independant health.
+
 # Congratulations
 If you have gotten here, you techincally have a complete game. Try to survive as long as you can running away from the enemies. If you would like to stop here, in the pannel on the left side, go to sensing, and check the box near the bottom of the section next to the text "timer". This will give you a high score you can play for.
 
@@ -278,10 +281,87 @@ If you have gotten here, you techincally have a complete game. Try to survive as
 
 However, there is much more that can be added to improve the game and make it more like the one I showed at the beginning. There are several more sections to come if you would like to keep working on the game.
 
-## 4. shooting
-## 5. background
-## 6. title screen
-## 7. sounds/background music
-## 8. pickups
-## 9. explosion
-## 10. enemy health
+## 5. Shooting
+
+We want the roketship to be able to fire. It always helps to be overly specific what you want to do when programming, even in scratch. So more specifically, we want to be able to press a button and a projectile fires out the top of the screen, moves forward for some distance, destroying any enemies that the projectile touches, and then after a certain distance the projectile goes away.
+Since, just like with the enemies, we don't know how many of them there will be, we will need to use clones again.
+First create a new sprite.
+
+### The WHEN KEY IS PRESSED block:
+
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/6ad6a256-41d4-4193-a9a8-abe90b3dbaf0)
+
+This block is like the START block except that it activates when the player presses a specific button.
+Choose a button you want to be the fire button and create a clone when the button is pressed. Then have that clone teleport to the rocket, face the same direction it is facing (towards the mouse pointer) and then move forward for the distance you want and then delete the clone. Since the projectile will teleport to where 10 steps ahead would be instead of taking each individual step, you will need to have it move part of the way several times via a REPEAT block.
+
+### The REPEAT block:
+
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/e8d1b349-d85c-45ab-b579-c8d6d319b32a)
+
+This block is just like the forever block except that it repeats its contents the number of times you give it instead of indefinitely.
+
+### Firing projectile code:
+
+The scripts you create should include all of the elements of the examples below.
+
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/98c3c007-f10e-4f12-a3a0-a3fb92dd3d83)
+
+### Destroying enemies:
+
+Now add to the enemy a script that deletes it when it touches a projectile.
+
+The script should look something like this:
+
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/21b2ecf1-d14c-443d-83a9-cafe42bcc589)
+
+## 6. Title screens
+
+To make the game more polished we should add an title screen with the title of the game and a game over screen at allows you to play the game again. To do this we want to change when the game starts from the moment the green flag is pressed to when an on-screen button is pressed. The simplest way to do this is with messages.
+
+### The MESSAGE blocks:
+
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/cef1a1a2-3e7d-4be1-990b-9558e6c65be8)
+
+The first block is like the START block but activates when it receives a message.
+The second block sends a message to all sprites.
+The third block sends a message to all sprites and then waits until the message is received.
+
+To make the game start when a button is pressed, we can simply have that button send a message and then replace all our START blocks with RECEIVE blocks so that the game starts when the message is received by all the sprites. The same message can be sent on the game over screen to allow the user to restart the game.
+
+Create a new sprite for the title screen. When the START block is activated, show the screen. When the CLICKED block is activated, hide it and broadcast the start game message.
+
+### The CLICKED block:
+
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/431ec697-ea30-4f9f-90ed-c9016e69619e)
+
+The first block is like the START block but activates when this sprite is clicked.
+
+### Game over screen
+
+Create a new sprite for the game over screen and copy the script with the CLICKED block into it.
+Now we need to know when the game is over.
+Replace the STOP all block in the rocketship with a BROADCAST block that sends out a "game over" message.
+
+### Stop the game
+
+Add a RECEIVE block that receives the "game over" message and deletes the clone to everything that creates clones.
+Add a RECEIVE block that receives the "game over" message and hides the sprite to everything else.
+
+
+## 7. Sounds/background music
+## 8. Pickups
+## 9. Explosion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
