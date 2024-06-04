@@ -1,8 +1,33 @@
 # Scratch Tutorial
 
 ## 1. Setup and Adding Sprites
+### Accounts
 
-when activated, blocks finish what they are doing and then activate the block below them
+You can work on a project without an account, but you cannot save your projects. So, personally I advise signing up for an account.
+
+If you chose to sign up, cick on the file shapped button.
+
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/8db08655-a743-4b47-971e-a2a3b42afdc6)
+
+Then click to create a new project.
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/7f9e99f3-2ca6-4ce0-a8ee-14d85ace3246)
+
+
+### The First Project
+![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/d3e03eca-d16c-464f-a655-bb89551cecc8)
+
+The far left are the list of code blocks that can be put together to cause actions in the game.
+The center area is where you place the code blocks.
+The top far right is the game screen.
+The bottom far left contains the list of objects in the game (sprites) and the details about the sprite that is currently selected.
+
+At the top left of the game screen there is a green flag and a red stop sign. Clicking on the green flag starts the game and clicking on the red stop sign stops it.
+
+Blocks can be taken out of the list and placed into the center. Clicking on a block will activate it and cause it to perform its action. When activated, blocks finish what they are doing and then activate the block below them.
+
+The code block area is associated with whichever sprite you have selected. Changing the selected sprite will change the code block area to display whatever code blocks you have given to that sprite.
+
+In the bottom right corner of the sprites area there is a cat's head with a plus sign next to it. Click on this (or hover over it and then click on one of the options) to add a new sprite into the game.
 
 
 ## 2. Character Movement
