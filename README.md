@@ -1,5 +1,9 @@
 # Scratch Tutorial
 
+This tutorial will walk you through how to build a game using Scratch.
+
+The game we will be creating can be played here: https://scratch.mit.edu/projects/1024206125/
+
 ## 1. Setup and Adding Sprites
 ### Accounts
 
@@ -17,8 +21,11 @@ Then click to create a new project.
 ![image](https://github.com/JarodSGilliam/library-scratch-tutorial/assets/38574399/d3e03eca-d16c-464f-a655-bb89551cecc8)
 
 The far left are the list of code blocks that can be put together to cause actions in the game.
+
 The center area is where you place the code blocks.
+
 The top far right is the game screen.
+
 The bottom far left contains the list of objects in the game (sprites) and the details about the sprite that is currently selected.
 
 At the top left of the game screen there is a green flag and a red stop sign. Clicking on the green flag starts the game and clicking on the red stop sign stops it.
